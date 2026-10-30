@@ -1,0 +1,90 @@
+{
+  "model_name": "IsolationForest_Forensic_Anomaly",
+  "model_architecture": "IsolationForest+StandardScaler",
+  "version": "1.0.0",
+  "mode": "UNSUPERVISED",
+  "feature_names": [
+    "duration_seconds",
+    "mean_confidence",
+    "max_confidence",
+    "detection_count",
+    "displacement_pixels",
+    "mean_velocity_pixels_per_second",
+    "object_count_in_window",
+    "event_frequency_in_window",
+    "is_person",
+    "is_vehicle",
+    "has_entry_edge",
+    "has_exit_edge",
+    "sequence_position"
+  ],
+  "training_dataset_source": "unsupervised_forensic_features_baseline",
+  "dataset_hash": "dba6479ebaaee8a0fa04048c8940e9fd697ab3356790dc159d2a56aeadf6340b",
+  "sample_count": 33,
+  "threshold": 0.65,
+  "metrics": {
+    "mode": "UNSUPERVISED",
+    "sample_count": 33,
+    "anomaly_count": 2,
+    "anomaly_rate": 0.0606,
+    "score_distribution": {
+      "min": 0.0,
+      "p25": 0.1742,
+      "median": 0.2434,
+      "p75": 0.394,
+      "max": 1.0,
+      "mean": 0.2917,
+      "std": 0.1939
+    },
+    "threshold": 0.65,
+    "inference_time_seconds": 0.09405,
+    "inference_fps": 350.88
+  },
+  "candidate_comparison": {
+    "isolation_forest": {
+      "mode": "UNSUPERVISED",
+      "sample_count": 33,
+      "anomaly_count": 2,
+      "anomaly_rate": 0.0606,
+      "score_distribution": {
+        "min": 0.0,
+        "p25": 0.1742,
+        "median": 0.2434,
+        "p75": 0.394,
+        "max": 1.0,
+        "mean": 0.2917,
+        "std": 0.1939
+      },
+      "threshold": 0.65,
+      "inference_time_seconds": 0.09405,
+      "inference_fps": 350.88
+    },
+    "local_outlier_factor": {
+      "mode": "UNSUPERVISED",
+      "sample_count": 33,
+      "anomaly_count": 1,
+      "anomaly_rate": 0.0303,
+      "score_distribution": {
+        "min": 0.0,
+        "p25": 0.0237,
+        "median": 0.0559,
+        "p75": 0.1014,
+        "max": 1.0,
+        "mean": 0.097,
+        "std": 0.1734
+      },
+      "threshold": 0.65,
+      "inference_time_seconds": 0.002615,
+      "inference_fps": 12618.06
+    },
+    "selection_rationale": "Isolation Forest selected for global anomaly partitioning and robust out-of-distribution calibration."
+  },
+  "library_versions": {
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "numpy": "2.2.6"
+  },
+  "model_file_path": "models\\forensic_model.joblib",
+  "model_file_sha256": "f16cb0fae2e41047353f1e58f9fa573cf990a150bdec2a80e51a5b5acbf4593d",
+  "trained_at_utc": "2026-08-31T15:45:19Z"
+}

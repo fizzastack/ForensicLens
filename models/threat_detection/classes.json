@@ -1,0 +1,9 @@
+{
+  "classes": [
+    "Gun",
+    "explosion",
+    "grenade",
+    "knife"
+  ],
+  "count": 4
+}

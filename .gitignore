@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Scratch & test temporaries
+scratch_sanitization_test/
+*.tmp
+*.log
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+*.pt
+/dataset/
+/reports/
